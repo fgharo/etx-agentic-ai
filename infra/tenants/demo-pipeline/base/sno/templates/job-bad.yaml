@@ -4,7 +4,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: trigger-java-app-build-bad
-  namespace: demo-pipeline
+  namespace: ai-agent
 spec:
   template:
     spec:
@@ -51,7 +51,7 @@ spec:
             metadata:
               # generateName creates a unique name for each run (e.g., java-app-build-run-bad-abc12).
               generateName: java-app-build-run-bad-
-              namespace: demo-pipeline
+              namespace: ai-agent
             spec:
               taskRunTemplate:
                 serviceAccountName: pipeline
